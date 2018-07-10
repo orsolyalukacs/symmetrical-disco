@@ -9,7 +9,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      // a single route can define multiple named components
+      // which will be rendered into <router-view>s with corresponding names.
+      name: 'root',
       component: HelloWorld
     },
     {
