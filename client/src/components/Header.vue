@@ -23,6 +23,11 @@
                     Sign Up
                 </router-link>
             </v-btn>
+
+            <v-btn flat dark
+            @click="navigateTo({name:'login'})">
+                Login
+            </v-btn>
         </v-toolbar-items>
     </v-toolbar>
 </template>

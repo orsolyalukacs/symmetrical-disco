@@ -18,6 +18,12 @@ require('../routes')(app)
 //     message: 'hello world!'})
 // })
 
+// app.post('/login', (req, res) => {
+//   var email = req.body.email
+//   var htmlData = 'Hello' + ' ' + email + '!'
+//   res.send(htmlData)
+// })
+
 // connects sequelize to whatever database it is configured for,
 // create tables and set up everything ready-to-go
 // when syncing the database is done, we just start the server
