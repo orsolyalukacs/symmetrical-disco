@@ -12,6 +12,7 @@
             </v-text-field>
           <br><br>
              <v-text-field
+             type="password"
               label="Password"
               v-model="password">
             </v-text-field>

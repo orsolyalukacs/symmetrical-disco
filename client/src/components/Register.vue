@@ -6,15 +6,21 @@
           <v-toolbar-title>Register</v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pb-2 pt-2">
+          <form
+            name="tab-tracker-form"
+            autocomlete="off">
            <v-text-field
               label="Email"
               v-model="email">
             </v-text-field>
           <br><br>
              <v-text-field
+              type="password"
               label="Password"
-              v-model="password">
+              v-model="password"
+              autocomplete="new-password">
             </v-text-field>
+            </form>
           <br>
           <div class="error" v-html="error" />
           <br>

@@ -7,8 +7,8 @@ module.exports = {
     options: {
       dialect: process.env.DB_DIALECT || 'sqlite',
       host: process.env.HOST || 'localhost',
-      storage: './tabtracker.sqlite',
-      operatorsAliases: false
+      storage: './tabtracker.sqlite'
+      // operatorsAliases: false
     }
   },
   authentication: {

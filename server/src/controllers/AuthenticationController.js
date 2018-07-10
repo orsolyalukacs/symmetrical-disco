@@ -1,10 +1,23 @@
 const {User} = require('../models')
+const jwt = require('jsonwebtoken')
+const config = require('../config/config')
+
+function jwtSignUser (user) {
+  const ONE_WEEK = 60 * 60 * 24 * 7
+  return jwt.sign(user, config.authentication.jwtSecret, {
+    expiresIn: ONE_WEEK
+  })
+}
 
 module.exports = {
   async register (req, res) {
     try {
       const user = await User.create(req.body)
-      res.send(user.toJSON())
+      const userJson = user.toJSON()
+      res.send({
+        user: userJson,
+        token: jwtSignUser(userJson)
+      })
     } catch (err) {
     // email already exists
       res.status(400).send({
@@ -29,7 +42,7 @@ module.exports = {
         })
       }
 
-      const isPasswordValid = password === user.password
+      const isPasswordValid = await user.comparePassword(password)
       console.log(password, user.password)
       console.log(isPasswordValid)
       if (!isPasswordValid) {
@@ -40,8 +53,13 @@ module.exports = {
 
       const userJson = user.toJSON()
       res.send({
-        user: userJson
+        user: userJson,
+        token: jwtSignUser(userJson)
       })
+      // const userJson = user.toJSON()
+      // res.send({
+      //   user: userJson
+      // })
     } catch (err) {
       res.status(500).send({ // 500 Internal Server error.
         error: 'An error has occured trying to log.'
