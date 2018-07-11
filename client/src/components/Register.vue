@@ -40,6 +40,16 @@ export default {
       error: null
     }
   },
+  // watch: {
+  //   email (value) {
+  //     console.log('email has changed', value)
+  //   }
+  // },
+  // mounted () {
+  //   setTimeout(function () {
+  //     this.email = 'hello world'
+  //   }, 2000)
+  // },
   methods: {
     async register () {
       try {
