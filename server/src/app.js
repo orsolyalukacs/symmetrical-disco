@@ -16,7 +16,7 @@ require('../routes')(app)
 // connects sequelize to whatever database it is configured for,
 // create tables and set up everything ready-to-go
 // when syncing the database is done, we just start the server
-sequelize.sync()
+sequelize.sync({force: true})
   .then(() => {
     app.listen(config.port)
     console.log(`Server started on ${config.port}`)

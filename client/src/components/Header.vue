@@ -7,12 +7,11 @@
             </span>
         </v-toolbar-title>
 
-        <!-- TODO: Implement Me
-            <v-toolbar-items>
-            <v-btn flat dark>
+        <v-toolbar-items>
+            <v-btn flat dark @click="navigateTo({name:'songs'})">
                 Browse
             </v-btn>
-        </v-toolbar-items> -->
+        </v-toolbar-items>
 
         <v-spacer><!--space everything to the right after this-->
         </v-spacer>
