@@ -58,7 +58,10 @@
                 error>
                 {{error}}
             </v-alert>
-            <v-btn dark class="blue accent-3" @click="create">
+            <v-btn
+                dark
+                class="blue accent-3"
+                @click="create">
                 Create Song
             </v-btn>
         </v-flex>
