@@ -6,7 +6,6 @@ module.exports = {
         limit: 10
       })
       res.send(songs)
-      console.log(songs)
     } catch (err) {
       res.status(500).send({ // 500 Internal Server error.
         error: 'An error has occured trying to fetch the songs.'
@@ -17,7 +16,6 @@ module.exports = {
     try {
       const song = await Song.create(req.body)
       res.send(song)
-      // console.log(song)
     } catch (err) {
       res.status(500).send({ // 500 Internal Server error.
         error: 'An error has occured trying to create the song.'

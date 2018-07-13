@@ -33,6 +33,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.danger-alert{
+  background-color: #FF5252
+}
 /* .v-text-field__slot input{
   border-bottom: 1px solid black;
 } */

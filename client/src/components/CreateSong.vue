@@ -5,11 +5,15 @@
         <v-flex xs4>
             <panel title="Song Metadata">
                 <v-text-field
+                    required
+                    :rules="[required]"
                     label="Title"
                     v-model="song.title"
                 ></v-text-field>
 
                 <v-text-field
+                    required
+                    :rules="[required]"
                     label="Artist"
                     v-model="song.artist"
                 ></v-text-field>
@@ -20,6 +24,8 @@
                 ></v-text-field>
 
                 <v-text-field
+                    required
+                    :rules="[required]"
                     label="Album"
                     v-model="song.album"
                 ></v-text-field>
@@ -38,15 +44,20 @@
             <panel title="Song Structure" class="ml-2">
                 <v-text-field
                     label="Tab"
-                    v-model="tab"
-                    multi-line
+                    v-model="song.tab"
                 ></v-text-field>
                 <v-text-field
                     label="Lyrics"
-                    v-model="lyrics"
+                    v-model="song.lyrics"
                 ></v-text-field>
             </panel>
-
+            <v-alert
+                class="ml-4"
+                :value="error"
+                transition="scale-transition"
+                error>
+                {{error}}
+            </v-alert>
             <v-btn dark class="blue accent-3" @click="create">
                 Create Song
             </v-btn>
@@ -70,11 +81,21 @@ export default {
         youtubeId: null,
         lyrics: null,
         tab: null
-      }
+      },
+      error: null,
+      required: (value) => !!value || 'Required.'
     }
   },
   methods: {
     async create () {
+      this.error = null
+      const areAllFieldsFilledIn = Object
+        .keys(this.song)
+        .every(key => !!this.song[key])
+      if (!areAllFieldsFilledIn) {
+        this.error = 'Please fill in all the required fields.'
+        return
+      }
       try {
         await SongsService.post(this.song)
         this.$router.push({
