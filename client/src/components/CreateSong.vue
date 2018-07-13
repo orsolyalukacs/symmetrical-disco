@@ -42,14 +42,15 @@
         </v-flex>
         <v-flex xs8>
             <panel title="Song Structure" class="ml-2">
-                <v-text-field
+                <v-textarea
                     label="Tab"
                     v-model="song.tab"
-                ></v-text-field>
-                <v-text-field
+                    readonly
+                ></v-textarea>
+                <v-textarea
                     label="Lyrics"
                     v-model="song.lyrics"
-                ></v-text-field>
+                ></v-textarea>
             </panel>
             <v-alert
                 class="ml-4"
