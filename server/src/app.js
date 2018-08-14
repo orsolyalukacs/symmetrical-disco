@@ -2,8 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
-const {sequelize} = require('./models')// we assume that we have a models folder, that has an index.js file in it,
-// which returns an object that has a sequelize attribute
+const {sequelize} = require('./models')
 const config = require('./config/config')
 
 const app = express()
