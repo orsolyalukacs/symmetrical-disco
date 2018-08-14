@@ -18,8 +18,10 @@
                   class="green accent-2"
                   :to="{
                     name: 'song-edit',
-                      params: {
-                      songId: song.id
+                      params () {
+                        return {
+                          songId: song.id
+                        }
                       }
                     }">
                   Edit
