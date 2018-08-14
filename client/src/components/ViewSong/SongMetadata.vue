@@ -38,12 +38,7 @@
 export default {
   props: [
     'song'
-  ],
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
-    }
-  }
+  ]
 }
 </script>
 <style scoped>

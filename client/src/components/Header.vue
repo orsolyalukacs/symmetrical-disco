@@ -1,14 +1,23 @@
 <template>
     <v-toolbar dark fixed class="blue accent-2">
         <v-toolbar-title class="mr-4">
-            <span class="home"
-            @click="navigateTo({name:'root'})">
+            <router-link
+            class="home"
+            tag="span"
+            :to="{
+                name:'root'
+                }">
             Symmetrical Disco
-            </span>
+            </router-link>
         </v-toolbar-title>
 
         <v-toolbar-items>
-            <v-btn flat dark @click="navigateTo({name:'songs'})">
+            <v-btn
+            flat
+            dark
+            :to="{
+                name:'songs'
+                }">
                 Browse
             </v-btn>
         </v-toolbar-items>
@@ -17,20 +26,31 @@
         </v-spacer>
 
         <v-toolbar-items>
-            <v-btn v-if="!$store.state.isUserLoggedIn" flat dark>
-                <router-link to="register">
+            <v-btn v-if="!$store.state.isUserLoggedIn"
+            flat
+            dark
+            :to="{
+                name:'register'}
+                ">
                     Sign Up
-                </router-link>
             </v-btn>
 
-            <v-btn v-if="!$store.state.isUserLoggedIn" flat dark
-            @click="navigateTo({name:'login'})">
+            <v-btn v-if="!$store.state.isUserLoggedIn"
+            flat
+            dark
+            :to="{
+                name:'login'
+                }">
                 Login
             </v-btn>
 
-             <v-btn v-if="$store.state.isUserLoggedIn" flat dark
-                @click="logout">
-                    Log Out
+             <v-btn v-if="$store.state.isUserLoggedIn"
+             flat
+             dark
+            :to="{
+                name:'logout'}
+                ">
+                Log Out
             </v-btn>
 
         </v-toolbar-items>
@@ -39,9 +59,6 @@
 <script>
 export default {
   methods: {
-    navigateTo (route) {
-      this.$router.push(route)
-    },
     logout () {
       this.$store.dispatch('setToken', null)
       this.$store.dispatch('setUser', null)
