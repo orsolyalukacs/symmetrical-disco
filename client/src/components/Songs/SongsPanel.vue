@@ -49,16 +49,24 @@
 </template>
 <script>
 import SongsService from '@/services/SongsService'
+
 export default {
   data () {
     return {
       songs: null
     }
   },
-  async mounted () {
-    // do a request to the backend for all the songs
-    this.songs = (await SongsService.index()).data
-    console.log('songs', this.songs)
+  watch: {
+    '$route.query.search': {
+      immediate: true,
+      async handler (value) {
+        this.songs = (await SongsService.index(value)).data
+      }
+    }
+  // },
+  // async mounted () {
+  //   // do a request to the backend for all the songs
+  //   this.songs = (await SongsService.index()).data
   }
 }
 </script>
