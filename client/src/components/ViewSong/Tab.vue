@@ -3,7 +3,7 @@
     <panel title="Tab">
       <textarea
             v-model="song.tab"
-            readonly>
+            >
       </textarea>
     </panel>
 </template>

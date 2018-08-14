@@ -45,7 +45,6 @@
                 <v-textarea
                     label="Tab"
                     v-model="song.tab"
-                    readonly
                 ></v-textarea>
                 <v-textarea
                     label="Lyrics"
