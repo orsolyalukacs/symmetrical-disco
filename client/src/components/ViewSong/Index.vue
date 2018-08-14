@@ -13,7 +13,7 @@
     </v-layout>
     <!--Tab-->
     <v-layout>
-      <v-flex xs6 clas="ml-2 mt-2">
+      <v-flex xs6 class="ml-2 mt-2">
         <tab :song="song">
         </tab>
       </v-flex>
