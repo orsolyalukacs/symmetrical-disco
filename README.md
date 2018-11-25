@@ -14,3 +14,7 @@ cd server
 npm install
 npm start
 ```
+### Note
+```
+This is a work in progress app.
+```
