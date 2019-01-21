@@ -60,7 +60,7 @@
             </v-alert>
             <v-btn
                 dark
-                class="blue accent-3"
+                class="teal accent-4"
                 @click="create">
                 Create Song
             </v-btn>

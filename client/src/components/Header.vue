@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar dark fixed class="blue accent-2">
+    <v-toolbar dark fixed class="teal lighten-1">
         <v-toolbar-title class="mr-4">
             <router-link
             class="home"
@@ -79,6 +79,6 @@ a {
 }
 
 .home:hover{
-    color:#e9e;
+    color:#A7FFEB;
 }
 </style>

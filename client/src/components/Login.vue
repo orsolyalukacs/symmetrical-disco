@@ -15,7 +15,7 @@
           <br>
           <div class="danger-alert" v-html="error" />
           <br>
-          <v-btn dark class="blue accent-3"
+          <v-btn dark class="teal accent-4"
             @click="login">
                 Login
         </v-btn>

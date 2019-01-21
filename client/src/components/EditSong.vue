@@ -60,7 +60,7 @@
             </v-alert>
             <v-btn
                 dark
-                class="blue accent-3"
+                class="teal accent-3"
                 @click="save">
                 Save Song
             </v-btn>

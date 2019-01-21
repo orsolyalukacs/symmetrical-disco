@@ -20,7 +20,7 @@
           <br>
           <div class="danger-alert" v-html="error" />
           <br>
-          <v-btn dark class="blue accent-3" @click="register">Register</v-btn>
+          <v-btn dark class="teal accent-4" @click="register">Register</v-btn>
       </panel>
     </v-flex>
   </v-layout>
