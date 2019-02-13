@@ -2,22 +2,22 @@
   <v-layout column>
     <v-flex xs6 offset-xs3>
       <panel title="Login">
-           <v-text-field
-              label="Email"
-              v-model="email">
-            </v-text-field>
-          <br><br>
-             <v-text-field
-             type="password"
-              label="Password"
-              v-model="password">
-            </v-text-field>
-          <br>
-          <div class="danger-alert" v-html="error" />
-          <br>
-          <v-btn dark class="teal accent-4"
-            @click="login">
-                Login
+        <v-text-field
+          label="Email"
+          v-model="email">
+        </v-text-field>
+        <br><br>
+        <v-text-field
+          type="password"
+          label="Password"
+          v-model="password">
+        </v-text-field>
+        <br>
+        <div class="danger-alert" v-html="error" />
+        <br>
+        <v-btn dark class="teal accent-4"
+        @click="login">
+        Login
         </v-btn>
       </panel>
     </v-flex>

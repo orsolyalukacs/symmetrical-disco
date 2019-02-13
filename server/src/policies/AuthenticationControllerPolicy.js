@@ -10,7 +10,7 @@ module.exports = { // creates a module which has a register method
       )
     }
 
-    const {error} = Joi.validate(req.body, schema)
+    const { error } = Joi.validate(req.body, schema)
 
     if (error) {
       switch (error.details[0].context.key) {

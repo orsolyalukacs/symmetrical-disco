@@ -1,10 +1,10 @@
 
 <template>
-    <v-layout column>
-        <v-flex xs6 offset-xs3>
-          <songs-search-panel />
-          <songs-panel class="mt-2"/>
-        </v-flex>
+  <v-layout column>
+    <v-flex xs6 offset-xs3>
+      <songs-search-panel />
+      <songs-panel class="mt-2"/>
+    </v-flex>
   </v-layout>
 </template>
 <script>
@@ -35,16 +35,16 @@ export default {
     overflow: hidden;
   }
   .song-title{
-  font-size: 30px;
+    font-size: 30px;
   }
   .song-artist{
-  font-size: 24px;
+    font-size: 24px;
   }
   .song-genre{
-  font-size: 18px;
+    font-size: 18px;
   }
   .album-image{
-      width: 70%;
-      margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
   }
 </style>

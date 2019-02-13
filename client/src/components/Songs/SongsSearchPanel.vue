@@ -1,9 +1,9 @@
 <template>
     <panel title="Search">
-          <v-text-field
-              label="Search by song title, artist, album, genre"
-              v-model="search">
-            </v-text-field>
+      <v-text-field
+        label="Search by song title, artist, album, genre"
+        v-model="search">
+      </v-text-field>
     </panel>
 </template>
 <script>
