@@ -43,8 +43,7 @@ module.exports = {
       }
 
       const isPasswordValid = await user.comparePassword(password)
-      console.log(password, user.password)
-      console.log(isPasswordValid)
+
       if (!isPasswordValid) {
         return res.status(403).send({ // 403 Forbidden - authentication error.
           error: 'The login information was incorrect'
